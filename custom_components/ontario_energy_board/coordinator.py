@@ -30,6 +30,7 @@ from .const import (
     XML_KEY_LOSS_ADJUSTMENT_FACTOR,
     XML_KEY_NETWORK_SERVICE_RATE,
     XML_KEY_CONNECTION_SERVICE_RATE,
+    XML_KEY_DISTRIBUTION_CHARGE_RATE,
     XML_KEY_WHOLESALE_MARKET_SERVICE_RATE,
     XML_KEY_RURAL_REMOTE_RATE_PROTECTION_CHARGE,
     XML_KEY_STANDARD_SUPPLY_SERVICE,
@@ -60,6 +61,7 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
     loss_adjustment_factor = None
     network_service_rate = None
     connection_service_rate = None
+    distribution_charge_rate = None
     wholesale_market_service_rate = None
     rural_remote_rate_protection_charge = None
     standard_supply_service = None
@@ -127,6 +129,9 @@ class OntarioEnergyBoardDataUpdateCoordinator(DataUpdateCoordinator):
                 )
                 self.wholesale_market_service_rate = float(
                     company.find(XML_KEY_WHOLESALE_MARKET_SERVICE_RATE).text
+                )
+                self.distribution_charge_rate = float (
+                    company.find(XML_KEY_DISTRIBUTION_CHARGE_RATE).text
                 )
                 self.rural_remote_rate_protection_charge = float(
                     company.find(XML_KEY_RURAL_REMOTE_RATE_PROTECTION_CHARGE).text

@@ -1,7 +1,7 @@
 """Constants for the Ontario Energy Board integration."""
 from datetime import timedelta
 
-DOMAIN = "ontario_energy_board"
+DOMAIN = "ontario_energy_board_electricity"
 
 CONF_ENERGY_COMPANY = "energy_company"
 CONF_ULO_ENABLED = "ulo_enabled"
@@ -35,6 +35,7 @@ XML_KEY_SERVICE_CHARGE = "SC"
 XML_KEY_LOSS_ADJUSTMENT_FACTOR = "LF"
 XML_KEY_NETWORK_SERVICE_RATE = "Net"
 XML_KEY_CONNECTION_SERVICE_RATE = "Conn"
+XML_KEY_DISTRIBUTION_CHARGE_RATE = "DC"
 XML_KEY_WHOLESALE_MARKET_SERVICE_RATE = "WMSR"
 XML_KEY_RURAL_REMOTE_RATE_PROTECTION_CHARGE = "RRRP"
 XML_KEY_STANDARD_SUPPLY_SERVICE = "SSS"
