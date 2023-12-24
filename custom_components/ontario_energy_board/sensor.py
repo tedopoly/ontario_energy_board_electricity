@@ -144,6 +144,7 @@ class OntarioEnergyBoardSensor(CoordinatorEntity, SensorEntity):
             "loss_adjustment_factor": self.coordinator.loss_adjustment_factor,
             "network_service_rate": self.coordinator.network_service_rate,
             "connection_service_rate": self.coordinator.connection_service_rate,
+            "distribution_charge_rate": self.coordinator.distribution_charge_rate,
             "wholesale_market_service_rate": self.coordinator.wholesale_market_service_rate,
             "rural_remote_rate_protection_charge": self.coordinator.rural_remote_rate_protection_charge,
             "standard_supply_service": self.coordinator.standard_supply_service,
